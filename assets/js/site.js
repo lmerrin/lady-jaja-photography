@@ -64,6 +64,26 @@ document
     }
   });
 
+document.querySelectorAll('.site-footer a[href^="mailto:"]').forEach((link) => {
+  link.classList.add("contact-icon-link");
+  if (!link.querySelector("svg")) {
+    link.insertAdjacentHTML(
+      "afterbegin",
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="m4 7 8 6 8-6"></path></svg>',
+    );
+  }
+});
+
+document.querySelectorAll('.site-footer a[href^="tel:"]').forEach((link) => {
+  link.classList.add("contact-icon-link");
+  if (!link.querySelector("svg")) {
+    link.insertAdjacentHTML(
+      "afterbegin",
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.1 3.5 4.6 5.2c-.8.6-.9 1.7-.5 2.6 2.5 5.5 6.8 9.8 12.3 12.3.9.4 2 .3 2.6-.5l1.7-2.5c.4-.6.3-1.5-.3-2l-3.1-2.3c-.6-.4-1.4-.4-1.9.2l-1.5 1.5a16.5 16.5 0 0 1-4.5-4.5l1.5-1.5c.5-.5.6-1.3.2-1.9L9.1 3.8c-.5-.7-1.4-.8-2-.3Z"></path></svg>',
+    );
+  }
+});
+
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxClose = lightbox?.querySelector(".lightbox-close");

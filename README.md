@@ -84,6 +84,14 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Added a persistent English and Traditional Chinese language toggle
 - Added hand-written Traditional Chinese translations for navigation, primary content, FAQs, inquiry fields and policy pages
 
+## Revision 10 gallery restoration and featured-image update
+
+- Replaced seven homepage collection previews with Jaja's selected photographs
+- Kept all homepage collection frames at a consistent 3:2 proportion with tailored focal positioning
+- Restored nine Wedding and sixteen Landscape photographs from Jaja's current public Wix galleries
+- Returned Jaja's portrait to the About page in a clean editorial composition
+- Added email and phone icons to the footer Connect links
+
 ## Launch notes
 
 - Replace resized Wix exports with original high-resolution photographs as Jaja provides them.

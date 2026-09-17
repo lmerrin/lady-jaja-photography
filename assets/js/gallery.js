@@ -38,8 +38,8 @@ function displayCategory(item) {
       item.file.endsWith("home-04.webp")
     )
       return "family";
-    if (item.file.endsWith("home-03.png")) return "portraits";
     if (
+      item.file.endsWith("home-03.png") ||
       item.file.endsWith("home-06.webp") ||
       item.file.endsWith("home-07.webp")
     )
