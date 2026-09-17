@@ -143,7 +143,6 @@ const traditionalChinese = {
     "Lady Jaja Photography 歐胡島自然風格攝影",
   "Skip to content": "跳至主要內容",
   Home: "首頁",
-  Sessions: "攝影服務",
   Portfolio: "作品集",
   About: "關於 Jaja",
   Contact: "聯絡我們",
@@ -151,7 +150,6 @@ const traditionalChinese = {
   "View Portfolio": "瀏覽作品集",
   "View collection": "查看作品",
   "Explore the portfolio": "探索作品集",
-  "Every season has its own story.": "每一個人生階段，都有屬於自己的故事。",
   "Family Portrait": "家庭寫真",
   Newborn: "新生兒",
   Kids: "兒童寫真",
@@ -163,8 +161,6 @@ const traditionalChinese = {
   Landscape: "風景攝影",
   "Meet Jaja": "認識 Jaja",
   "Easygoing sessions. Honest photographs.": "自在的拍攝體驗，真實動人的影像。",
-  "Jaja creates a relaxed space for families, couples and individuals to be themselves—then preserves the connection, personality and beauty already there.":
-    "Jaja 為家庭、伴侶與個人營造輕鬆自在的拍攝氛圍，讓每個人自然做自己，並將彼此的情感、個性與真實之美珍藏下來。",
   "More about Jaja": "深入認識 Jaja",
   "The experience": "拍攝體驗",
   "Simple from hello to gallery.": "從初次聯絡到收到照片，都簡單安心。",
@@ -176,9 +172,6 @@ const traditionalChinese = {
   Receive: "收件",
   "Enjoy thoughtfully edited digital photographs.":
     "收藏經過細心後製的數位照片。",
-  "Explore the session experience": "了解拍攝流程",
-  "Selected work": "精選作品",
-  "Connection, personality and place.": "情感、個性與土地之美。",
   "Frequently asked questions": "常見問題",
   "A few helpful details before you inquire.":
     "聯絡前，你可能想先了解這些資訊。",
@@ -205,10 +198,6 @@ const traditionalChinese = {
   "Today, I photograph families, portraits and celebrations across Oʻahu with a relaxed, people-first approach.":
     "現在，我在歐胡島為家庭、個人與各種慶祝時刻拍攝，以輕鬆自在、以人為本的方式記錄真實情感。",
   "Come as you are. I’ll help with the rest.": "做你自己就好，其餘的交給我。",
-  "The approach": "Jaja 的拍攝方式",
-  "Present over perfect.": "真實，比完美更重要。",
-  "Gentle direction leaves room for the expressions, movement and relationships that make your photographs personal.":
-    "溫柔適度的引導，為真實表情、自然動作與彼此關係保留空間，讓每張照片都真正屬於你。",
   "Photography sessions": "攝影服務",
   "Serving families, portraits and celebrations across Oʻahu.":
     "為歐胡島的家庭、個人與重要慶祝時刻留下影像。",
@@ -246,24 +235,8 @@ const traditionalChinese = {
   "People, milestones and the beauty of Oʻahu.":
     "人物、人生里程碑，以及歐胡島之美。",
   "Loading the portfolio…": "作品載入中…",
-  "The people and connections that make life feel like home.":
-    "記錄讓生活有家之感的人與情感連結。",
-  "Quiet, tender photographs of your newest beginning.":
-    "以安靜溫柔的影像，珍藏全新的開始。",
   "Playful portraits filled with personality, movement and wonder.":
     "充滿個性、動感與童真的活潑寫真。",
-  "Individual portraits that feel natural, expressive and distinctly you.":
-    "自然、富有表情，也真正屬於你的個人寫真。",
-  "A thoughtful record of anticipation, strength and growing love.":
-    "細膩記錄期待、力量與日漸深厚的愛。",
-  "Relaxed milestone portraits that celebrate who you are becoming.":
-    "以自在的里程碑寫真，慶祝正在成為的自己。",
-  "Connection, ceremony and the meaningful details surrounding your day.":
-    "記錄情感、儀式，以及重要日子裡每個有意義的細節。",
-  "The atmosphere, people and moments that bring a celebration to life.":
-    "捕捉讓慶典鮮活起來的氛圍、人物與時刻。",
-  "Place, light and the natural beauty Jaja notices along the way.":
-    "記錄 Jaja 沿途看見的地方、光線與自然之美。",
   "Begin your inquiry": "開始詢問",
   "Let’s make something meaningful.": "一起創造值得珍藏的影像。",
   "Share a few details below. Jaja will follow up personally with availability, current options and next steps.":

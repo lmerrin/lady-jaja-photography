@@ -53,9 +53,9 @@ const portfolioGroups = [
   [
     "family",
     "Family Portrait",
-    "The people and connections that make life feel like home.",
+    "",
   ],
-  ["newborn", "Newborn", "Quiet, tender photographs of your newest beginning."],
+  ["newborn", "Newborn", ""],
   [
     "kids",
     "Kids",
@@ -64,32 +64,32 @@ const portfolioGroups = [
   [
     "portraits",
     "Self Portrait",
-    "Individual portraits that feel natural, expressive and distinctly you.",
+    "",
   ],
   [
     "maternity",
     "Maternity",
-    "A thoughtful record of anticipation, strength and growing love.",
+    "",
   ],
   [
     "seniors",
     "Senior Portraits",
-    "Relaxed milestone portraits that celebrate who you are becoming.",
+    "",
   ],
   [
     "weddings",
     "Wedding",
-    "Connection, ceremony and the meaningful details surrounding your day.",
+    "",
   ],
   [
     "events",
     "Events",
-    "The atmosphere, people and moments that bring a celebration to life.",
+    "",
   ],
   [
     "landscape",
     "Landscape",
-    "Place, light and the natural beauty Jaja notices along the way.",
+    "",
   ],
 ];
 
@@ -162,7 +162,10 @@ async function loadGallery() {
         const translatedTitle = window.ladyJajaTranslate?.(title) || title;
         const translatedDescription =
           window.ladyJajaTranslate?.(description) || description;
-        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${translatedTitle}</h2><p>${translatedDescription}</p></header><div class="gallery-grid">${gallery}</div></section>`;
+        const descriptionMarkup = translatedDescription
+          ? `<p>${translatedDescription}</p>`
+          : "";
+        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${translatedTitle}</h2>${descriptionMarkup}</header><div class="gallery-grid">${gallery}</div></section>`;
       })
       .join("");
     document.dispatchEvent(new Event("gallery:loaded"));

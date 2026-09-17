@@ -383,25 +383,6 @@ p {
 .inclusion-grid span {
   color: rgba(255, 255, 255, 0.72);
 }
-.selected-work__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: start;
-}
-.selected-work__grid button {
-  overflow: hidden;
-  aspect-ratio: 3 / 2;
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: zoom-in;
-}
-.selected-work__grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .cta-clean {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
@@ -950,7 +931,6 @@ p {
   .category-index,
   .simple-features,
   .inclusion-grid,
-  .selected-work__grid,
   .form-grid,
   .footer-grid {
     grid-template-columns: 1fr;
