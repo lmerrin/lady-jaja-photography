@@ -27,8 +27,17 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Global styles: `assets/css/styles.css`
 - Navigation, motion, FAQ and lightbox: `assets/js/site.js`
 - Portfolio loading and category organization: `assets/js/gallery.js`
-- Display font: Fraunces from Google Fonts
-- Body font: DM Sans from Google Fonts
+- Display font: Young Serif from Google Fonts
+- Body font: Instrument Sans from Google Fonts
+
+## Revision 5 design update
+
+- Restored a full-photography hero direction
+- Reorganized the portfolio into nine distinct collections
+- Removed decorative section numbers
+- Recovered uncropped, higher-resolution versions of the Wix family photographs
+- Simplified the homepage and kept Jaja's full story on the About page
+- Refined the contact form into a cleaner inquiry layout
 - Contact destination: `contact.html`
 - SEO metadata: inside the `<head>` of each page
 - Sitemap: `sitemap.xml`
