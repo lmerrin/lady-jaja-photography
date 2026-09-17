@@ -269,7 +269,7 @@ p {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 .home-hero::after {
@@ -393,7 +393,8 @@ p {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
 }
 .page-hero--image::after {
   content: "";
@@ -481,6 +482,10 @@ p {
   display: grid;
   gap: clamp(5rem, 9vw, 8rem);
 }
+.portfolio-category + .portfolio-category {
+  padding-top: clamp(4rem, 7vw, 6rem);
+  border-top: 1px solid var(--line);
+}
 .portfolio-category {
   scroll-margin-top: 150px;
 }
@@ -503,17 +508,22 @@ p {
   font-size: 0.98rem;
 }
 .gallery-grid {
-  columns: 3 300px;
-  column-gap: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.gallery-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
 .gallery-item {
   display: block;
-  width: 100%;
-  margin: 0 0 1rem;
+  flex: var(--image-ratio) 1 0%;
+  min-width: 0;
+  margin: 0;
   border: 0;
   padding: 0;
   background: transparent;
-  break-inside: avoid;
   cursor: zoom-in;
 }
 .gallery-item img {
@@ -524,6 +534,13 @@ p {
 }
 .gallery-item:hover img {
   opacity: 0.88;
+}
+.gallery-row--1 .gallery-item {
+  flex-grow: 0;
+  width: min(60%, 720px);
+}
+.gallery-row--2 .gallery-item {
+  max-width: calc(50% - 0.5rem);
 }
 .intro-grid,
 .split-grid {
@@ -848,7 +865,7 @@ p {
     min-height: 620px;
   }
   .home-hero__photo {
-    object-fit: contain;
+    object-fit: cover;
   }
   .home-hero__content {
     gap: 1.5rem;
@@ -883,8 +900,15 @@ p {
   .portfolio-jump {
     top: 70px;
   }
-  .gallery-grid {
-    columns: 1;
+  .gallery-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gallery-item,
+  .gallery-row--1 .gallery-item,
+  .gallery-row--2 .gallery-item {
+    width: 100%;
+    max-width: none;
   }
   .footer-bottom {
     flex-direction: column;
@@ -1094,7 +1118,16 @@ p {
   margin-inline: auto;
 }
 .contact-section {
-  padding: 0 0 clamp(5rem, 10vw, 9rem);
+  padding: clamp(3rem, 7vw, 6rem) 0 clamp(5rem, 10vw, 9rem);
+}
+
+.footer-links a,
+.footer-bottom a {
+  text-decoration: none;
+}
+.footer-links a:hover,
+.footer-bottom a:hover {
+  color: #fff;
 }
 .contact-shell {
   width: min(760px, calc(100% - 2rem));

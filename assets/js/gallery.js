@@ -107,10 +107,26 @@ async function loadGallery() {
       .map((item) => ({ ...item, displayCategory: displayCategory(item) }))
       .filter((item) => item.displayCategory);
     portfolio.innerHTML = portfolioGroups
-      .map(([id, title, description], groupIndex) => {
+      .map(([id, title, description]) => {
         const groupItems = items.filter((item) => item.displayCategory === id);
-        const next = portfolioGroups[(groupIndex + 1) % portfolioGroups.length];
-        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><div><span>${String(groupIndex + 1).padStart(2, "0")}</span><h2 id="${id}-title">${title}</h2></div><p>${description}</p></header><div class="gallery-grid">${groupItems.map((item, index) => `<button class="gallery-item" type="button" data-lightbox aria-label="Enlarge ${categoryLabels[id]} image ${index + 1}"><img src="${item.file}" loading="lazy" decoding="async" alt="${altText(id, index)}"></button>`).join("")}</div><a class="next-collection" href="#${next[0]}"><span>Next collection</span><strong>${next[1]} →</strong></a></section>`;
+        const rows = [];
+        for (let i = 0; i < groupItems.length; i += 3) {
+          rows.push(groupItems.slice(i, i + 3));
+        }
+        const gallery = rows
+          .map(
+            (row, rowIndex) =>
+              `<div class="gallery-row gallery-row--${row.length}">${row
+                .map((item, itemIndex) => {
+                  const index = rowIndex * 3 + itemIndex;
+                  const ratio =
+                    item.width && item.height ? item.width / item.height : 1;
+                  return `<button class="gallery-item" style="--image-ratio:${ratio}" type="button" data-lightbox aria-label="Enlarge ${categoryLabels[id]} image ${index + 1}"><img src="${item.file}" loading="lazy" decoding="async" alt="${altText(id, index)}"></button>`;
+                })
+                .join("")}</div>`,
+          )
+          .join("");
+        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${title}</h2><p>${description}</p></header><div class="gallery-grid">${gallery}</div></section>`;
       })
       .join("");
     document.dispatchEvent(new Event("gallery:loaded"));

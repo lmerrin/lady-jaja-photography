@@ -63,7 +63,16 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Changed the type system to Jost and Public Sans
 - Simplified the portfolio index and added a Next Collection link after every gallery
 - Refined the inquiry page into a spacious, single-column form
-- Preserved natural photograph proportions throughout; no fixed cover crops are used
+- Preserved natural photograph proportions in portfolio and content galleries
+
+## Revision 8 alignment corrections
+
+- Changed header and hero photographs to fill their sections without black side bars
+- Removed decorative numbering from the homepage and portfolio
+- Rebuilt portfolio galleries as proportional rows with aligned gaps and uncropped images
+- Replaced Next Collection links with light category dividers
+- Increased the space before the inquiry form
+- Removed underlines from footer links while preserving hover and focus feedback
 
 ## Launch notes
 
