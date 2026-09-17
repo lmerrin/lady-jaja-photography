@@ -93,6 +93,36 @@ const portfolioGroups = [
   ],
 ];
 
+function scrollToRequestedCategory(behavior = "auto") {
+  const category = decodeURIComponent(window.location.hash.slice(1));
+  if (!category || !categoryLabels[category]) return;
+
+  const target = document.getElementById(category);
+  if (!target) return;
+
+  const headerHeight =
+    document.querySelector(".site-header")?.getBoundingClientRect().height || 0;
+  const categoryNavHeight =
+    document.querySelector(".portfolio-jump")?.getBoundingClientRect().height ||
+    0;
+  const top =
+    target.getBoundingClientRect().top +
+    window.scrollY -
+    headerHeight -
+    categoryNavHeight -
+    16;
+
+  window.scrollTo({ top: Math.max(0, top), behavior });
+}
+
+function settleRequestedCategory() {
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => scrollToRequestedCategory()),
+  );
+  window.setTimeout(() => scrollToRequestedCategory(), 200);
+  document.fonts?.ready.then(() => scrollToRequestedCategory());
+}
+
 function altText(category, index) {
   if (window.ladyJajaLanguage?.() === "zh-Hant") {
     return `Lady Jaja Photography 於歐胡島拍攝的${window.ladyJajaTranslate?.(categoryLabels[category]) || categoryLabels[category]}照片，第 ${index + 1} 張`;
@@ -136,12 +166,7 @@ async function loadGallery() {
       })
       .join("");
     document.dispatchEvent(new Event("gallery:loaded"));
-    if (location.hash)
-      requestAnimationFrame(() =>
-        document
-          .querySelector(location.hash)
-          ?.scrollIntoView({ behavior: "smooth" }),
-      );
+    if (location.hash) settleRequestedCategory();
   } catch (error) {
     portfolio.innerHTML =
       "<p>The portfolio could not be loaded. Please refresh the page or contact Jaja directly.</p>";
@@ -149,3 +174,8 @@ async function loadGallery() {
 }
 loadGallery();
 document.addEventListener("languagechange", loadGallery);
+window.addEventListener("hashchange", () => scrollToRequestedCategory("smooth"));
+window.addEventListener("pageshow", () => {
+  if (location.hash && portfolio?.querySelector(".portfolio-category"))
+    settleRequestedCategory();
+});
