@@ -72,6 +72,20 @@ async function loadGallery() {
           </div>
         </section>`;
     }).join('');
+    const categories = portfolio.querySelectorAll('.portfolio-category');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const categoryObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-arrived');
+            categoryObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .08, rootMargin: '0px 0px -8% 0px' });
+      categories.forEach(category => categoryObserver.observe(category));
+    } else {
+      categories.forEach(category => category.classList.add('is-arrived'));
+    }
     document.dispatchEvent(new Event('gallery:loaded'));
     if (location.hash) {
       requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView({ behavior: 'smooth' }));
