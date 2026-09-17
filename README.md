@@ -2,7 +2,7 @@
 
 Deployment-ready static website prepared for Lady Jaja Photography by Webby Wahine.
 
-This revision adds an editorial, image-led homepage; category entrance transitions; stronger first-person brand voice; and session-experience wording based on Jaja’s supplied booking sheets. No prices from those sheets are published.
+This revision delivers a simplified, image-led portfolio website in response to Jaja’s final content review. No pricing is published.
 
 ## Preview on GitHub Pages
 
@@ -101,6 +101,14 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Moved contact-page behavior into the external JavaScript file so the stricter security policy can block inline scripts
 - Strengthened Cloudflare headers with object, frame and cross-origin restrictions
 - Expanded the privacy notice to identify service providers, retention, security limitations and the absence of intentional tracking cookies
+
+## Revision 14 client content update
+
+- Simplified the homepage by removing the Selected Work section and requested introductory copy
+- Removed the Sessions page and all navigation links to it; the former URL now redirects home
+- Shortened the Portfolio category introductions while retaining the Kids description requested by the client
+- Removed the secondary Approach section from the About page
+- Permanently removed the five client-identified photographs from both the image folder and gallery manifest
 
 ## Launch notes
 

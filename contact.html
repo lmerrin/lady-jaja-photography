@@ -52,7 +52,6 @@
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="sessions.html">Sessions</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" aria-current="page">Contact</a></li>
@@ -179,7 +178,6 @@
           <div>
             <h3>Explore</h3>
             <ul class="footer-links">
-              <li><a href="sessions.html">Sessions</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -224,22 +222,5 @@
       </div>
     </footer>
     <script src="assets/js/site.js" defer></script>
-    <script>
-      const requested = new URLSearchParams(location.search).get("session");
-      if (requested) {
-        const select = document.querySelector("#session");
-        const map = {
-          family: "Family Portrait",
-          newborn: "Newborn",
-          kids: "Kids",
-          portraits: "Self Portrait",
-          maternity: "Maternity",
-          seniors: "Senior Portrait",
-          weddings: "Wedding",
-          events: "Event",
-        };
-        if (map[requested]) select.value = map[requested];
-      }
-    </script>
   </body>
 </html>
