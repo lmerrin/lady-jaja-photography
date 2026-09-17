@@ -74,6 +74,16 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Increased the space before the inquiry form
 - Removed underlines from footer links while preserving hover and focus feedback
 
+## Revision 9 bilingual and layout update
+
+- Removed the About-page photo hero and portrait
+- Standardized homepage collection previews to consistent 3:2 editorial frames
+- Kept full photographs uncropped inside the portfolio
+- Removed portfolio divider lines and increased spacing between collections
+- Removed the two low-resolution landscape images
+- Added a persistent English and Traditional Chinese language toggle
+- Added hand-written Traditional Chinese translations for navigation, primary content, FAQs, inquiry fields and policy pages
+
 ## Launch notes
 
 - Replace resized Wix exports with original high-resolution photographs as Jaja provides them.

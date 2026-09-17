@@ -43,7 +43,7 @@ function displayCategory(item) {
       item.file.endsWith("home-06.webp") ||
       item.file.endsWith("home-07.webp")
     )
-      return "landscape";
+      return null;
     return null;
   }
   return item.category;
@@ -94,6 +94,9 @@ const portfolioGroups = [
 ];
 
 function altText(category, index) {
+  if (window.ladyJajaLanguage?.() === "zh-Hant") {
+    return `Lady Jaja Photography 於歐胡島拍攝的${window.ladyJajaTranslate?.(categoryLabels[category]) || categoryLabels[category]}照片，第 ${index + 1} 張`;
+  }
   return `${categoryLabels[category]} photograph by Lady Jaja Photography on Oʻahu, image ${index + 1}`;
 }
 
@@ -126,7 +129,10 @@ async function loadGallery() {
                 .join("")}</div>`,
           )
           .join("");
-        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${title}</h2><p>${description}</p></header><div class="gallery-grid">${gallery}</div></section>`;
+        const translatedTitle = window.ladyJajaTranslate?.(title) || title;
+        const translatedDescription =
+          window.ladyJajaTranslate?.(description) || description;
+        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${translatedTitle}</h2><p>${translatedDescription}</p></header><div class="gallery-grid">${gallery}</div></section>`;
       })
       .join("");
     document.dispatchEvent(new Event("gallery:loaded"));
@@ -142,3 +148,4 @@ async function loadGallery() {
   }
 }
 loadGallery();
+document.addEventListener("languagechange", loadGallery);

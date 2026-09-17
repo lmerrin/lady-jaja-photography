@@ -166,6 +166,22 @@ p {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.language-toggle {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: 700 0.9rem/1.65 var(--body);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  cursor: pointer;
+}
+.language-toggle:hover {
+  color: var(--terracotta);
+}
+.home-page .language-toggle:hover {
+  color: #fff;
+}
 .nav-list a[aria-current="page"] {
   color: var(--terracotta);
 }
@@ -484,7 +500,6 @@ p {
 }
 .portfolio-category + .portfolio-category {
   padding-top: clamp(4rem, 7vw, 6rem);
-  border-top: 1px solid var(--line);
 }
 .portfolio-category {
   scroll-margin-top: 150px;
@@ -496,7 +511,6 @@ p {
   align-items: end;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--line);
 }
 .portfolio-category__heading h2 {
   margin: 0;
@@ -816,6 +830,13 @@ p {
     display: block;
     padding: 0.75rem;
   }
+  .language-toggle {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    color: var(--ink);
+    text-align: left;
+  }
   .header-cta {
     display: none;
   }
@@ -983,10 +1004,14 @@ p {
 }
 .collection-row__image {
   overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: var(--cream);
 }
 .collection-row__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .collection-row:hover .collection-row__image img {
@@ -1001,6 +1026,14 @@ p {
   margin: 0.75rem 0 1.4rem;
   font-size: clamp(2.4rem, 5vw, 5rem);
   font-weight: 500;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.about-intro {
+  padding-top: clamp(5rem, 10vw, 9rem);
+}
+.about-intro h1 {
+  max-width: 760px;
 }
 .collection-row__text strong {
   font-size: 0.78rem;
@@ -1082,33 +1115,6 @@ p {
   background: transparent;
   color: var(--terracotta);
   border-bottom-color: var(--terracotta);
-}
-.portfolio-category__heading > div > span {
-  display: block;
-  margin-bottom: 0.65rem;
-  color: var(--terracotta);
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
-}
-.next-collection {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-}
-.next-collection span {
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.next-collection strong {
-  font: 500 clamp(1.35rem, 3vw, 2.25rem)/1.1 var(--display);
 }
 .contact-hero {
   padding: clamp(5rem, 10vw, 9rem) 0 4rem;

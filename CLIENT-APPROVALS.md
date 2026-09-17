@@ -30,3 +30,7 @@ The current website and questionnaire did not provide complete answers for the i
 9. **Session inclusions**
    - Confirm that the public wording about one-location portrait sessions, professionally edited high-resolution downloads and flexible ceremony/event coverage still reflects Jaja’s current process.
    - Prices remain private and are intentionally omitted from the website.
+
+10. **Traditional Chinese wording**
+
+- Have Jaja or a fluent Traditional Chinese reader review the translated service, inquiry, FAQ, privacy and accessibility wording before the final domain launch.
