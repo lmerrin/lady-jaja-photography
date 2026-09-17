@@ -27,8 +27,8 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Global styles: `assets/css/styles.css`
 - Navigation, motion, FAQ and lightbox: `assets/js/site.js`
 - Portfolio loading and category organization: `assets/js/gallery.js`
-- Display font: Josefin Sans from Google Fonts
-- Body font: Karla from Google Fonts
+- Display font: Jost from Google Fonts
+- Body font: Public Sans from Google Fonts
 
 ## Revision 5 design update
 
@@ -54,6 +54,16 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Sitemap: `sitemap.xml`
 - Cloudflare security headers: `_headers`
 - Wix URL redirects: `_redirects`
+
+## Revision 7 editorial redesign
+
+- Introduced a floating transparent homepage navigation and full-height hero
+- Rebuilt the homepage collections as alternating, full-width editorial rows
+- Added a concise Meet Jaja introduction without duplicating the About page
+- Changed the type system to Jost and Public Sans
+- Simplified the portfolio index and added a Next Collection link after every gallery
+- Refined the inquiry page into a spacious, single-column form
+- Preserved natural photograph proportions throughout; no fixed cover crops are used
 
 ## Launch notes
 

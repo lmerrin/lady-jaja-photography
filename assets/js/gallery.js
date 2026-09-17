@@ -1,39 +1,96 @@
-const portfolio = document.querySelector('[data-portfolio-groups]');
+const portfolio = document.querySelector("[data-portfolio-groups]");
 
 const categoryLabels = {
-  family: 'Family Portrait', newborn: 'Newborn', kids: 'Kids', portraits: 'Self Portrait',
-  maternity: 'Maternity', seniors: 'Senior Portraits', weddings: 'Wedding',
-  events: 'Events', landscape: 'Landscape'
+  family: "Family Portrait",
+  newborn: "Newborn",
+  kids: "Kids",
+  portraits: "Self Portrait",
+  maternity: "Maternity",
+  seniors: "Senior Portraits",
+  weddings: "Wedding",
+  events: "Events",
+  landscape: "Landscape",
 };
 
-const newbornFiles = new Set(['assets/images/kids-02.webp','assets/images/kids-03.webp','assets/images/kids-06.webp','assets/images/kids-09.webp','assets/images/kids-13.webp','assets/images/home-05.webp']);
-const kidsFromFamily = new Set(['assets/images/family-stories-08.webp','assets/images/family-stories-11.webp']);
+const newbornFiles = new Set([
+  "assets/images/kids-02.webp",
+  "assets/images/kids-03.webp",
+  "assets/images/kids-06.webp",
+  "assets/images/kids-09.webp",
+  "assets/images/kids-13.webp",
+  "assets/images/home-05.webp",
+]);
+const kidsFromFamily = new Set([
+  "assets/images/family-stories-08.webp",
+  "assets/images/family-stories-11.webp",
+]);
 
 function displayCategory(item) {
-  if (newbornFiles.has(item.file)) return 'newborn';
-  if (kidsFromFamily.has(item.file)) return 'kids';
-  if (item.category === 'family-stories' || item.category === 'family') return 'family';
-  if (item.category === 'portraits') return 'portraits';
-  if (item.category === 'creative') return 'landscape';
-  if (item.category === 'home') {
-    if (item.file.endsWith('home-01.webp') || item.file.endsWith('home-04.webp')) return 'family';
-    if (item.file.endsWith('home-03.png')) return 'portraits';
-    if (item.file.endsWith('home-06.webp') || item.file.endsWith('home-07.webp')) return 'landscape';
+  if (newbornFiles.has(item.file)) return "newborn";
+  if (kidsFromFamily.has(item.file)) return "kids";
+  if (item.category === "family-stories" || item.category === "family")
+    return "family";
+  if (item.category === "portraits") return "portraits";
+  if (item.category === "creative") return "landscape";
+  if (item.category === "home") {
+    if (
+      item.file.endsWith("home-01.webp") ||
+      item.file.endsWith("home-04.webp")
+    )
+      return "family";
+    if (item.file.endsWith("home-03.png")) return "portraits";
+    if (
+      item.file.endsWith("home-06.webp") ||
+      item.file.endsWith("home-07.webp")
+    )
+      return "landscape";
     return null;
   }
   return item.category;
 }
 
 const portfolioGroups = [
-  ['family','Family Portrait','The people and connections that make life feel like home.'],
-  ['newborn','Newborn','Quiet, tender photographs of your newest beginning.'],
-  ['kids','Kids','Playful portraits filled with personality, movement and wonder.'],
-  ['portraits','Self Portrait','Individual portraits that feel natural, expressive and distinctly you.'],
-  ['maternity','Maternity','A thoughtful record of anticipation, strength and growing love.'],
-  ['seniors','Senior Portraits','Relaxed milestone portraits that celebrate who you are becoming.'],
-  ['weddings','Wedding','Connection, ceremony and the meaningful details surrounding your day.'],
-  ['events','Events','The atmosphere, people and moments that bring a celebration to life.'],
-  ['landscape','Landscape','Place, light and the natural beauty Jaja notices along the way.']
+  [
+    "family",
+    "Family Portrait",
+    "The people and connections that make life feel like home.",
+  ],
+  ["newborn", "Newborn", "Quiet, tender photographs of your newest beginning."],
+  [
+    "kids",
+    "Kids",
+    "Playful portraits filled with personality, movement and wonder.",
+  ],
+  [
+    "portraits",
+    "Self Portrait",
+    "Individual portraits that feel natural, expressive and distinctly you.",
+  ],
+  [
+    "maternity",
+    "Maternity",
+    "A thoughtful record of anticipation, strength and growing love.",
+  ],
+  [
+    "seniors",
+    "Senior Portraits",
+    "Relaxed milestone portraits that celebrate who you are becoming.",
+  ],
+  [
+    "weddings",
+    "Wedding",
+    "Connection, ceremony and the meaningful details surrounding your day.",
+  ],
+  [
+    "events",
+    "Events",
+    "The atmosphere, people and moments that bring a celebration to life.",
+  ],
+  [
+    "landscape",
+    "Landscape",
+    "Place, light and the natural beauty Jaja notices along the way.",
+  ],
 ];
 
 function altText(category, index) {
@@ -43,17 +100,29 @@ function altText(category, index) {
 async function loadGallery() {
   if (!portfolio) return;
   try {
-    const response = await fetch('assets/images/manifest.json');
-    if (!response.ok) throw new Error('Gallery manifest did not load');
-    const items = (await response.json()).filter(item => !item.file.endsWith('home-02.png')).map(item => ({...item, displayCategory: displayCategory(item)})).filter(item => item.displayCategory);
-    portfolio.innerHTML = portfolioGroups.map(([id,title,description]) => {
-      const groupItems = items.filter(item => item.displayCategory === id);
-      return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${title}</h2><p>${description}</p></header><div class="gallery-grid">${groupItems.map((item,index) => `<button class="gallery-item" type="button" data-lightbox aria-label="Enlarge ${categoryLabels[id]} image ${index + 1}"><img src="${item.file}" loading="lazy" decoding="async" alt="${altText(id,index)}"></button>`).join('')}</div></section>`;
-    }).join('');
-    document.dispatchEvent(new Event('gallery:loaded'));
-    if (location.hash) requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView({behavior:'smooth'}));
+    const response = await fetch("assets/images/manifest.json");
+    if (!response.ok) throw new Error("Gallery manifest did not load");
+    const items = (await response.json())
+      .filter((item) => !item.file.endsWith("home-02.png"))
+      .map((item) => ({ ...item, displayCategory: displayCategory(item) }))
+      .filter((item) => item.displayCategory);
+    portfolio.innerHTML = portfolioGroups
+      .map(([id, title, description], groupIndex) => {
+        const groupItems = items.filter((item) => item.displayCategory === id);
+        const next = portfolioGroups[(groupIndex + 1) % portfolioGroups.length];
+        return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><div><span>${String(groupIndex + 1).padStart(2, "0")}</span><h2 id="${id}-title">${title}</h2></div><p>${description}</p></header><div class="gallery-grid">${groupItems.map((item, index) => `<button class="gallery-item" type="button" data-lightbox aria-label="Enlarge ${categoryLabels[id]} image ${index + 1}"><img src="${item.file}" loading="lazy" decoding="async" alt="${altText(id, index)}"></button>`).join("")}</div><a class="next-collection" href="#${next[0]}"><span>Next collection</span><strong>${next[1]} →</strong></a></section>`;
+      })
+      .join("");
+    document.dispatchEvent(new Event("gallery:loaded"));
+    if (location.hash)
+      requestAnimationFrame(() =>
+        document
+          .querySelector(location.hash)
+          ?.scrollIntoView({ behavior: "smooth" }),
+      );
   } catch (error) {
-    portfolio.innerHTML = '<p>The portfolio could not be loaded. Please refresh the page or contact Jaja directly.</p>';
+    portfolio.innerHTML =
+      "<p>The portfolio could not be loaded. Please refresh the page or contact Jaja directly.</p>";
   }
 }
 loadGallery();
