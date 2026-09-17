@@ -16,7 +16,7 @@ Before connecting the live domain, preserve all existing email-related DNS recor
 
 ## Updating photographs
 
-Optimized photographs are stored in `assets/images/`. The portfolio reads `assets/images/manifest.json`. Add a new optimized image, then add a matching entry to that manifest with its file path, category, width and height.
+Optimized photographs are stored in `assets/images/`. The categorized portfolio reads `assets/images/manifest.json`. Add a new optimized image, then add a matching entry to that manifest with its file path, category, width and height. The portfolio automatically places it in the appropriate gallery section.
 
 Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`, `kids`, `events`, `creative`, and `family-stories`.
 
@@ -24,7 +24,9 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 
 - Global styles: `assets/css/styles.css`
 - Navigation, motion, FAQ and lightbox: `assets/js/site.js`
-- Portfolio loading and filters: `assets/js/gallery.js`
+- Portfolio loading and category organization: `assets/js/gallery.js`
+- Display font: Fraunces from Google Fonts
+- Body font: DM Sans from Google Fonts
 - Contact destination: `contact.html`
 - SEO metadata: inside the `<head>` of each page
 - Sitemap: `sitemap.xml`

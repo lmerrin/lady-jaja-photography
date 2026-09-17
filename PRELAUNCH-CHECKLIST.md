@@ -27,7 +27,7 @@
 
 - [ ] Test current versions of Chrome, Safari and Firefox.
 - [ ] Test desktop, tablet and phone widths.
-- [ ] Test the menu, filters, FAQs and lightbox with keyboard only.
+- [ ] Test the menu, portfolio category links, FAQs and lightbox with keyboard only.
 - [ ] Confirm focus indicators are visible.
 - [ ] Test at 200% zoom and with reduced-motion enabled.
 - [ ] Check color contrast and heading order.
