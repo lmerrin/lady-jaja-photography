@@ -538,12 +538,12 @@ p {
 }
 .gallery-grid {
   display: grid;
-  gap: 1rem;
+  gap: clamp(1.4rem, 2.4vw, 2rem);
 }
 .gallery-row {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: clamp(1.4rem, 2.4vw, 2rem);
 }
 .gallery-item {
   display: block;
@@ -1364,8 +1364,18 @@ p {
   .collection-row__text h3 {
     font-size: 2.2rem;
   }
+  .collection-row__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
   .collection-row__text strong {
-    font-size: 0.7rem;
+    grid-column: auto;
+    min-height: 40px;
+    padding: 0.58rem 0.9rem;
+    font-size: 0.66rem;
+    white-space: nowrap;
   }
   .simple-features div {
     min-height: 0;

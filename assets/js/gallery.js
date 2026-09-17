@@ -59,7 +59,7 @@ const portfolioGroups = [
   [
     "kids",
     "Kids",
-    "Playful portraits filled with personality, movement and wonder.",
+    "",
   ],
   [
     "portraits",
@@ -133,7 +133,7 @@ function altText(category, index) {
 async function loadGallery() {
   if (!portfolio) return;
   try {
-    const response = await fetch("assets/images/manifest.json?v=15", {
+    const response = await fetch("assets/images/manifest.json?v=16", {
       cache: "no-store",
     });
     if (!response.ok) throw new Error("Gallery manifest did not load");

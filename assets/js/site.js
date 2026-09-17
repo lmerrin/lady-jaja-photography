@@ -233,8 +233,6 @@ const traditionalChinese = {
     "告訴 Jaja 你的計畫，她會協助你選擇。",
   "The portfolio": "作品集",
   "Loading the portfolio…": "作品載入中…",
-  "Playful portraits filled with personality, movement and wonder.":
-    "充滿個性、動感與童真的活潑寫真。",
   "Begin your inquiry": "開始詢問",
   "Let’s make something meaningful.": "一起創造值得珍藏的影像。",
   "Share a few details below. Jaja will follow up personally with availability, current options and next steps.":
