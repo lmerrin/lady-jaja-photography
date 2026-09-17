@@ -2,6 +2,8 @@
 
 Deployment-ready static website prepared for Lady Jaja Photography by Webby Wahine.
 
+This revision adds an editorial, image-led homepage; category entrance transitions; stronger first-person brand voice; and session-experience wording based on Jaja’s supplied booking sheets. No prices from those sheets are published.
+
 ## Preview on GitHub Pages
 
 Upload the contents of this folder to the repository root. In GitHub, open **Settings → Pages**, select **Deploy from a branch**, choose the main branch and root folder, then save.

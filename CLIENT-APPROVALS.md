@@ -26,3 +26,7 @@ The current website and questionnaire did not provide complete answers for the i
 
 8. **Original image files**
    - Provide original high-resolution photographs and the original transparent logo file when available.
+
+9. **Session inclusions**
+   - Confirm that the public wording about one-location portrait sessions, professionally edited high-resolution downloads and flexible ceremony/event coverage still reflects Jaja’s current process.
+   - Prices remain private and are intentionally omitted from the website.
