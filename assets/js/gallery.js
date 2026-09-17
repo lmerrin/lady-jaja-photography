@@ -133,7 +133,9 @@ function altText(category, index) {
 async function loadGallery() {
   if (!portfolio) return;
   try {
-    const response = await fetch("assets/images/manifest.json");
+    const response = await fetch("assets/images/manifest.json?v=15", {
+      cache: "no-store",
+    });
     if (!response.ok) throw new Error("Gallery manifest did not load");
     const items = (await response.json())
       .filter((item) => !item.file.endsWith("home-02.png"))
@@ -168,6 +170,18 @@ async function loadGallery() {
         return `<section class="portfolio-category" id="${id}" aria-labelledby="${id}-title"><header class="portfolio-category__heading"><h2 id="${id}-title">${translatedTitle}</h2>${descriptionMarkup}</header><div class="gallery-grid">${gallery}</div></section>`;
       })
       .join("");
+    portfolio.querySelectorAll(".gallery-item img").forEach((image) => {
+      image.addEventListener(
+        "error",
+        () => {
+          const item = image.closest(".gallery-item");
+          const row = item?.closest(".gallery-row");
+          item?.remove();
+          if (row && !row.querySelector(".gallery-item")) row.remove();
+        },
+        { once: true },
+      );
+    });
     document.dispatchEvent(new Event("gallery:loaded"));
     if (location.hash) settleRequestedCategory();
   } catch (error) {

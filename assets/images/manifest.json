@@ -126,13 +126,6 @@
     "height": 1200
   },
   {
-    "file": "assets/images/weddings-05.webp",
-    "category": "weddings",
-    "source_key": "f7a9ff_556b360e05db43fca5468de4205247a0~mv2_d_3555_5332_s_4_2.jpg",
-    "width": 1200,
-    "height": 1800
-  },
-  {
     "file": "assets/images/weddings-06.webp",
     "category": "weddings",
     "source_key": "f7a9ff_9412f4b72d9649eba70dee7b4e915ee3~mv2_d_3648_5472_s_4_2.jpg",
@@ -574,13 +567,6 @@
     "height": 1800
   },
   {
-    "file": "assets/images/family-01.webp",
-    "category": "family",
-    "source_key": "f7a9ff_66f5683ed6d84dad9eeae6dadea3a118~mv2.jpg",
-    "width": 1213,
-    "height": 1800
-  },
-  {
     "file": "assets/images/family-02.webp",
     "category": "family",
     "source_key": "f7a9ff_04fb5f5918e74d1993c416328011dfd2~mv2.jpg",
@@ -742,13 +728,6 @@
     "height": 1200
   },
   {
-    "file": "assets/images/family-stories-10.webp",
-    "category": "family-stories",
-    "source_key": "f7a9ff_9b03f5fe5c4446f29d641d5396f6cff1~mv2.jpg",
-    "width": 1800,
-    "height": 1200
-  },
-  {
     "file": "assets/images/family-stories-11.webp",
     "category": "family-stories",
     "source_key": "f7a9ff_570c76e6c7344005b3389db98f8b223f~mv2_d_5418_3612_s_4_2.jpg",
@@ -871,20 +850,6 @@
       "file": "assets/images/weddings-07.webp",
       "category": "weddings",
       "source_key": "f7a9ff_6f9e173fa35e46baada77e9797130597~mv2_d_3381_5072_s_4_2.jpg",
-      "width": 1200,
-      "height": 1800
-    },
-    {
-      "file": "assets/images/weddings-08.webp",
-      "category": "weddings",
-      "source_key": "f7a9ff_675c1366ec2e49d3b185d71b08126902~mv2_d_5394_3596_s_4_2.jpg",
-      "width": 1800,
-      "height": 1200
-    },
-    {
-      "file": "assets/images/weddings-09.webp",
-      "category": "weddings",
-      "source_key": "f7a9ff_8d48ab108681429c9ae349d4aa8231e8~mv2_d_3648_5472_s_4_2.jpg",
       "width": 1200,
       "height": 1800
     },

@@ -110,6 +110,14 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Removed the secondary Approach section from the About page
 - Permanently removed the five client-identified photographs from both the image folder and gallery manifest
 
+## Revision 15 portfolio cleanup
+
+- Removed the homepage FAQ section
+- Styled every View Collection link as a rounded button with hover and keyboard-focus feedback
+- Removed the Portfolio hero subtitle and the requested category descriptions
+- Added cache-busting to the gallery manifest request
+- Added a failed-image safeguard so a deleted photograph cannot leave a broken tile in the gallery
+
 ## Launch notes
 
 - Replace resized Wix exports with original high-resolution photographs as Jaja provides them.

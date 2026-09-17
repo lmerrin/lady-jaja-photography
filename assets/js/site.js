@@ -232,8 +232,6 @@ const traditionalChinese = {
   "Share what you are planning and Jaja will guide you.":
     "告訴 Jaja 你的計畫，她會協助你選擇。",
   "The portfolio": "作品集",
-  "People, milestones and the beauty of Oʻahu.":
-    "人物、人生里程碑，以及歐胡島之美。",
   "Loading the portfolio…": "作品載入中…",
   "Playful portraits filled with personality, movement and wonder.":
     "充滿個性、動感與童真的活潑寫真。",
