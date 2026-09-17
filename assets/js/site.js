@@ -44,6 +44,14 @@ document.querySelectorAll('[data-year]').forEach(element => {
   element.textContent = new Date().getFullYear();
 });
 
+document.querySelectorAll('a[href*="instagram.com/ladyjajaphotography"]').forEach(link => {
+  link.href = 'https://www.instagram.com/ladyjajaphotography?igshid=pebsprfggkbb';
+  link.classList.add('instagram-link');
+  if (!link.querySelector('svg')) {
+    link.insertAdjacentHTML('afterbegin', '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>');
+  }
+});
+
 const lightbox = document.querySelector('.lightbox');
 const lightboxImage = lightbox?.querySelector('img');
 const lightboxClose = lightbox?.querySelector('.lightbox-close');

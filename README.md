@@ -27,8 +27,8 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Global styles: `assets/css/styles.css`
 - Navigation, motion, FAQ and lightbox: `assets/js/site.js`
 - Portfolio loading and category organization: `assets/js/gallery.js`
-- Display font: Young Serif from Google Fonts
-- Body font: Instrument Sans from Google Fonts
+- Display font: Josefin Sans from Google Fonts
+- Body font: Karla from Google Fonts
 
 ## Revision 5 design update
 
@@ -38,6 +38,17 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Recovered uncropped, higher-resolution versions of the Wix family photographs
 - Simplified the homepage and kept Jaja's full story on the About page
 - Refined the contact form into a cleaner inquiry layout
+
+## Revision 6 cleanup
+
+- Rebuilt the hero around the white logo and two calls to action
+- Replaced the previous font pairing with Josefin Sans and Karla
+- Removed fixed image crops and preserved natural photograph proportions
+- Reduced homepage, session and About-page copy
+- Restored the FAQ section
+- Added a persistent portfolio category navigator
+- Rebuilt the contact page and redesigned the session-inclusions section
+- Added Jaja's linked Instagram icon in the footer
 - Contact destination: `contact.html`
 - SEO metadata: inside the `<head>` of each page
 - Sitemap: `sitemap.xml`
