@@ -34,3 +34,9 @@ The current website and questionnaire did not provide complete answers for the i
 10. **Traditional Chinese wording**
 
 - Have Jaja or a fluent Traditional Chinese reader review the translated service, inquiry, FAQ, privacy and accessibility wording before the final domain launch.
+
+11. **Portfolio permissions**
+   - Confirm Jaja has the contractual right and any required adult or parent/guardian releases to display every portfolio photograph, especially photographs of minors.
+
+12. **Client contract terms**
+   - Confirm booking, payment, cancellation, rescheduling, weather, delivery, archive, image-use and copyright/license terms in Jaja's client agreement. The public inquiry form intentionally does not replace that agreement.

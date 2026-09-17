@@ -6,6 +6,8 @@
 - [ ] Jaja confirms the FAQ and business details in `CLIENT-APPROVALS.md`.
 - [ ] Jaja approves the privacy and accessibility wording.
 - [ ] Jaja confirms Webby Wahine may continue using the current logo and publicly displayed photographs.
+- [ ] Jaja confirms she has appropriate portfolio/model permissions, including parent or guardian permission for displayed minors.
+- [ ] Jaja confirms her client agreement covers deposits, cancellations, weather, delivery, image use and copyright/licensing.
 
 ## Content and links
 

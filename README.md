@@ -92,6 +92,16 @@ Supported categories: `family`, `maternity`, `weddings`, `seniors`, `portraits`,
 - Returned Jaja's portrait to the About page in a clean editorial composition
 - Added email and phone icons to the footer Connect links
 
+## Revision 11 final layout, security and SEO review
+
+- Balanced every homepage collection row into equal 50/50 editorial columns
+- Replaced the portrait-oriented Selected Work image with a horizontal wedding photograph
+- Standardized the Selected Work photographs to matching 3:2 frames
+- Added a descriptive homepage H1 without changing the logo-only hero design
+- Moved contact-page behavior into the external JavaScript file so the stricter security policy can block inline scripts
+- Strengthened Cloudflare headers with object, frame and cross-origin restrictions
+- Expanded the privacy notice to identify service providers, retention, security limitations and the absence of intentional tracking cookies
+
 ## Launch notes
 
 - Replace resized Wix exports with original high-resolution photographs as Jaja provides them.

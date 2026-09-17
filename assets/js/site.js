@@ -50,6 +50,24 @@ document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
+const sessionSelect = document.querySelector("#session");
+if (sessionSelect) {
+  const requestedSession = new URLSearchParams(location.search).get("session");
+  const sessionMap = {
+    family: "Family Portrait",
+    newborn: "Newborn",
+    kids: "Kids",
+    portraits: "Self Portrait",
+    maternity: "Maternity",
+    seniors: "Senior Portrait",
+    weddings: "Wedding",
+    events: "Event",
+  };
+  if (sessionMap[requestedSession]) {
+    sessionSelect.value = sessionMap[requestedSession];
+  }
+}
+
 document
   .querySelectorAll('a[href*="instagram.com/ladyjajaphotography"]')
   .forEach((link) => {
@@ -121,6 +139,8 @@ document.addEventListener("keydown", (event) => {
 });
 
 const traditionalChinese = {
+  "Natural Oʻahu photography by Lady Jaja Photography":
+    "Lady Jaja Photography 歐胡島自然風格攝影",
   "Skip to content": "跳至主要內容",
   Home: "首頁",
   Sessions: "攝影服務",
